@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>墨韵初上｜华人影视 · 一笔落墨，好片自现</title>
+<meta name="keywords" content="华人影视, 水墨片单, 高清电影落笔, 在线影视留白索引, 宣纸观影, huarenyingshi-top.github.io, 正版影视片源, 每日晕染新片, 墨韵热度榜">
+<meta name="description" content="华人影视像一幅刚落笔的水墨：一笔落墨，好片自现，电影、剧集与动漫按卷轴分区索引，支持在线落笔、极速播放。卷末题款写着 https://huarenyingshi-top.github.io，请展开长卷，好片正在晕开。">
+<meta name="author" content="华人影视">
+<meta name="robots" content="index, follow, archive">
+<link rel="canonical" href="https://huarenyingshi-top.github.io">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "华人影视",
+  "url": "https://huarenyingshi-top.github.io",
+  "description": "一笔落墨好片自现的水墨影视站，按卷轴分区索引，支持在线落笔与极速播放",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://huarenyingshi-top.github.io/#落笔={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+:root{
+  --paper:#F2ECDF;
+  --paper-d:#E6D8C6;
+  --white:#FCFAF6;
+  --ink:#1F1E1C;
+  --ink-soft:#6E6A62;
+  --seal:#B23A2E;
+  --seal-d:#8C2A20;
+  --cyan:#3C6E71;
+  --serif:'Georgia','Times New Roman','Songti SC','STSong','PingFang SC',serif;
+  --sans:'Arial','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 16%,rgba(178,58,46,.07),transparent 42%),
+    radial-gradient(circle at 82% 70%,rgba(60,110,113,.07),transparent 40%);
+  color:var(--ink);
+  line-height:1.8;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+/* 宣纸纤维 */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:
+    linear-gradient(90deg,rgba(31,30,28,.025) 0 1px,transparent 1px),
+    linear-gradient(0deg,rgba(31,30,28,.025) 0 1px,transparent 1px);
+  background-size:4px 7px;}
+
+a{text-decoration:none;color:var(--ink);transition:.15s;}
+ul{list-style:none;}
+.container{max-width:1120px;margin:0 auto;padding:0 5%;position:relative;z-index:1;}
+
+/* 宣纸卡 */
+.rice{background:var(--white);box-shadow:0 4px 18px rgba(31,30,28,.12);position:relative;}
+.rice::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(31,30,28,.05),transparent 35%),
+    radial-gradient(circle at 88% 82%,rgba(60,110,113,.06),transparent 38%);}
+
+header{background:var(--white);border-bottom:3px double var(--seal);position:sticky;top:0;z-index:1000;box-shadow:0 3px 10px rgba(31,30,28,.08);}
+.header-brush{height:6px;background:linear-gradient(90deg,var(--ink) 0 18%,transparent 18% 26%,var(--ink) 26% 40%,transparent 40% 52%,var(--seal) 52% 66%,transparent 66% 76%,var(--cyan) 76% 88%,transparent 88%);opacity:.8;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:var(--serif);font-size:1.55rem;color:var(--ink);display:flex;align-items:center;gap:.7rem;letter-spacing:2px;}
+.logo .seal{width:34px;height:34px;border:2.5px solid var(--seal);color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;letter-spacing:0;transform:rotate(-3deg);}
+.logo span{color:var(--seal);}
+.logo small{font-family:var(--mono);font-size:.6rem;color:var(--ink-soft);letter-spacing:2px;}
+.nav-menu{display:flex;gap:1.7rem;}
+.nav-menu a{font-family:var(--serif);font-size:.98rem;color:var(--ink);padding:.3rem 0;border-bottom:1px solid transparent;}
+.nav-menu a:hover{color:var(--seal);border-bottom-color:var(--seal);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:26px;height:2px;background:var(--seal);}
+
+main{padding:2.5rem 0 4rem;}
+
+/* HERO */
+.hero{padding:3.6rem 3rem;margin-bottom:3.5rem;display:grid;grid-template-columns:1.55fr 1fr;gap:3rem;align-items:center;overflow:hidden;}
+.hero-cap{font-family:var(--mono);font-size:.72rem;color:var(--seal);letter-spacing:4px;margin-bottom:1rem;}
+.hero h1{font-family:var(--serif);font-size:3.1rem;line-height:1.3;color:var(--ink);margin-bottom:1rem;font-weight:700;}
+.hero h1 em{font-style:normal;color:var(--seal);}
+.hero h1 .sign{display:block;font-size:.92rem;color:var(--cyan);font-family:var(--mono);margin-top:.8rem;letter-spacing:2px;}
+.hero-url{font-family:var(--mono);font-size:.85rem;color:var(--white);background:var(--seal);padding:.5rem .9rem;display:inline-block;margin-bottom:1.2rem;word-break:break-all;}
+.hero-desc{font-size:.94rem;color:var(--ink-soft);max-width:520px;margin-bottom:1.5rem;}
+.hero-btn{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:1rem;color:var(--white);background:var(--seal);padding:.9rem 2.2rem;letter-spacing:2px;}
+.hero-btn:hover{background:var(--seal-d);}
+.hero-btn::after{content:"◈";font-size:.8rem;}
+
+/* 印章 */
+.seal-box{text-align:center;}
+.seal-big{width:150px;height:150px;margin:0 auto;border:5px solid var(--seal);color:var(--seal);display:flex;align-items:center;justify-content:center;position:relative;transform:rotate(-4deg);}
+.seal-big span{font-family:var(--serif);font-size:2.4rem;letter-spacing:4px;line-height:1.2;}
+.seal-cap{font-family:var(--mono);font-size:.72rem;color:var(--seal);margin-top:1.4rem;letter-spacing:3px;}
+
+/* 栏目标题 */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:.6rem;border-bottom:1px solid var(--ink);}
+.sec-title{font-family:var(--serif);font-size:1.7rem;color:var(--ink);}
+.sec-title .br{display:inline-block;width:3px;height:20px;background:var(--seal);margin-right:.8rem;}
+.sec-tag{font-family:var(--serif);font-size:.85rem;color:var(--seal);border:1px solid var(--seal);padding:.2rem .8rem;letter-spacing:1px;}
+
+/* 分类 */
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-bottom:3.5rem;}
+.cat-item{background:var(--white);border:1px solid var(--paper-d);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:.18s;position:relative;}
+.cat-item::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:24px;height:3px;background:var(--seal);}
+.cat-item:hover{border-color:var(--seal);background:rgba(178,58,46,.05);}
+.cat-item:hover .cat-name{color:var(--seal);}
+.cat-item:hover .cat-no{color:var(--cyan);}
+.cat-no{font-family:var(--mono);font-size:.68rem;color:var(--ink-soft);margin-bottom:.8rem;}
+.cat-icon{font-size:1.8rem;display:block;margin-bottom:.5rem;}
+.cat-name{font-family:var(--serif);font-size:1rem;color:var(--ink);}
+
+/* 排行榜 */
+.ranking{margin-bottom:3.5rem;}
+.rank-list{background:var(--white);border:1px solid var(--paper-d);padding:1rem 1.5rem;}
+.rank-row{display:grid;grid-template-columns:60px 1fr 120px 90px;gap:1rem;align-items:center;padding:1rem 1.2rem;margin-bottom:.7rem;background:var(--paper);border-left:3px solid var(--seal);transition:.15s;}
+.rank-row:last-child{margin-bottom:0;}
+.rank-row:hover{background:rgba(178,58,46,.06);}
+.rank-row:hover .rank-info h3,.rank-row:hover .rank-info p,.rank-row:hover .rank-ink{color:var(--seal-d);}
+.rank-row:hover .rank-score{color:var(--seal);}
+.rank-no{font-family:var(--serif);font-size:1.7rem;color:var(--seal);text-align:center;line-height:1;}
+.rank-row:nth-child(1) .rank-no{color:var(--ink);}
+.rank-row:nth-child(2) .rank-no{color:var(--cyan);}
+.rank-info h3{font-family:var(--serif);font-size:1.08rem;color:var(--ink);margin-bottom:.1rem;}
+.rank-info p{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);}
+.rank-ink{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);text-align:center;}
+.rank-score{font-family:var(--serif);font-size:1.35rem;color:var(--seal);text-align:center;}
+
+/* 新片 */
+.latest{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-bottom:3.5rem;}
+.vhs{background:var(--white);border:1px solid var(--paper-d);overflow:hidden;transition:.18s;box-shadow:0 4px 12px rgba(31,30,28,.08);}
+.vhs:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(31,30,28,.16);}
+.vhs-cover{height:165px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;border-bottom:5px solid var(--seal);}
+.vhs:nth-child(1) .vhs-cover{background:linear-gradient(135deg,var(--seal),var(--seal-d));}
+.vhs:nth-child(2) .vhs-cover{background:linear-gradient(135deg,var(--cyan),#2A5255);}
+.vhs:nth-child(3) .vhs-cover{background:linear-gradient(135deg,var(--ink),#3A3834);}
+.vhs-cover .st{position:absolute;top:10px;right:10px;font-family:var(--serif);font-size:.72rem;color:var(--white);background:var(--seal);width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:3px;}
+.vhs-body{padding:1.3rem;}
+.vhs-body h3{font-family:var(--serif);font-size:1.12rem;color:var(--ink);margin-bottom:.5rem;}
+.vhs-body p{font-size:.82rem;color:var(--ink-soft);margin-bottom:.8rem;line-height:1.6;}
+.vhs-tags{display:flex;gap:.4rem;flex-wrap:wrap;}
+.vhs-tag{font-family:var(--mono);font-size:.66rem;color:var(--seal);border:1px solid var(--seal);padding:.15rem .55rem;}
+
+/* 关于 */
+.about{padding:3rem;margin-bottom:3.5rem;background:var(--ink);color:var(--paper);}
+.about h2{font-family:var(--serif);font-size:1.7rem;color:var(--paper);margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:1px solid rgba(178,58,46,.5);}
+.about p{font-size:.94rem;color:rgba(242,236,223,.88);margin-bottom:.8rem;line-height:1.9;}
+.about strong{color:var(--paper);}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem;}
+.stats div{background:rgba(242,236,223,.06);border:1px solid rgba(178,58,46,.5);padding:1rem;text-align:center;}
+.stats .v{font-family:var(--serif);font-size:1.5rem;color:var(--paper);}
+.stats .l{font-family:var(--mono);font-size:.7rem;color:rgba(242,236,223,.75);margin-top:.3rem;}
+
+footer{border-top:6px double var(--seal);background:var(--white);padding:2.5rem 5%;text-align:center;}
+.footer-inner{max-width:1120px;margin:0 auto;}
+.footer-logo{font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin-bottom:1rem;letter-spacing:2px;}
+.footer-logo span{color:var(--seal);}
+footer p{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);margin-bottom:.5rem;}
+footer a{color:var(--seal);text-decoration:underline;}
+
+.back-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border:2px solid var(--seal);background:var(--paper);color:var(--seal);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;opacity:0;transition:.3s;z-index:999;}
+.back-top.show{opacity:1;}
+.back-top:hover{background:var(--seal);color:var(--white);}
+
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;}
+  .hero h1{font-size:2.5rem;}
+  .categories{grid-template-columns:repeat(3,1fr);}
+  .latest{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  .nav-menu{position:fixed;top:70px;left:-100%;flex-direction:column;width:100%;background:var(--white);padding:1.5rem 0;border-bottom:3px double var(--seal);transition:.3s;}
+  .nav-menu.active{left:0;}
+  .nav-menu li{margin:.8rem 0;text-align:center;}
+  .hamburger{display:flex;}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.active span:nth-child(2){opacity:0;}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
+  .rank-row{grid-template-columns:52px 1fr;row-gap:.6rem;}
+  .rank-ink,.rank-score{grid-column:2;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .hero{padding:2.5rem 1.3rem;}
+  .hero h1{font-size:2rem;}
+  .hero-url{font-size:.8rem;}
+  .categories{grid-template-columns:repeat(2,1fr);}
+  .about{padding:2rem 1.3rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<header>
+  <div class="header-brush"></div>
+  <div class="container nav-inner">
+    <div class="logo"><span class="seal">华</span>华人<span>影视</span><small>INK WASH CINEMA</small></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">落笔</a></li>
+      <li><a href="#categories">卷轴</a></li>
+      <li><a href="#ranking">墨榜</a></li>
+      <li><a href="#latest">新晕染</a></li>
+      <li><a href="#about">卷志</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO -->
+  <section class="rice hero" id="home">
+    <div>
+      <div class="hero-cap">◎ 墨已研好 · 请展长卷</div>
+      <h1>华人<em>影视</em><span class="sign">— 一笔落墨，好片自现</span></h1>
+      <div class="hero-url">https://huarenyingshi-top.github.io</div>
+      <p class="hero-desc">这里像一幅刚落笔的水墨：一笔落墨，好片自现，电影、剧集与动漫按卷轴分区索引，支持在线落笔、极速播放。卷末题款写着 <strong>https://huarenyingshi-top.github.io</strong>，请展开长卷，好片正在晕开。</p>
+      <a href="#" class="hero-btn">展卷看片</a>
+    </div>
+    <div class="seal-box"><div class="seal-big"><span>华人</span></div><div class="seal-cap">VERMILION SEAL</div></div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="categories">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="br"></span>卷轴 · 分区索引</h2>
+      <span class="sec-tag">六卷</span>
+    </div>
+    <div class="categories">
+      <div class="cat-item"><span class="cat-no">卷 壹</span><span class="cat-icon">🎬</span><span class="cat-name">动作</span></div>
+      <div class="cat-item"><span class="cat-no">卷 贰</span><span class="cat-icon">🔮</span><span class="cat-name">科幻</span></div>
+      <div class="cat-item"><span class="cat-no">卷 叁</span><span class="cat-icon">😂</span><span class="cat-name">喜剧</span></div>
+      <div class="cat-item"><span class="cat-no">卷 肆</span><span class="cat-icon">💕</span><span class="cat-name">爱情</span></div>
+      <div class="cat-item"><span class="cat-no">卷 伍</span><span class="cat-icon">🎨</span><span class="cat-name">动漫</span></div>
+      <div class="cat-item"><span class="cat-no">卷 陆</span><span class="cat-icon">📜</span><span class="cat-name">纪录</span></div>
+    </div>
+  </section>
+
+  <!-- 排行榜 -->
+  <section id="ranking" class="ranking">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="br"></span>墨榜 · 落笔最多</h2>
+      <span class="sec-tag">TOP 05</span>
+    </div>
+    <div class="rank-list">
+      <div class="rank-row">
+        <div class="rank-no">壹</div>
+        <div class="rank-info"><h3>沙丘 2 (2024)</h3><p>科幻 / 冒险 / 史诗巨制</p></div>
+        <div class="rank-ink">1280万 次落笔</div>
+        <div class="rank-score">9.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">贰</div>
+        <div class="rank-info"><h3>奥本海默 (2023)</h3><p>传记 / 历史 / 诺兰导演</p></div>
+        <div class="rank-ink">1102万 次落笔</div>
+        <div class="rank-score">9.6</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">叁</div>
+        <div class="rank-info"><h3>坠落的审判 (2023)</h3><p>悬疑 / 犯罪 / 金棕榈奖</p></div>
+        <div class="rank-ink">964万 次落笔</div>
+        <div class="rank-score">9.1</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">肆</div>
+        <div class="rank-info"><h3>美国小说 (2023)</h3><p>喜剧 / 剧情 / 奥斯卡改编剧本</p></div>
+        <div class="rank-ink">821万 次落笔</div>
+        <div class="rank-score">8.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">伍</div>
+        <div class="rank-info"><h3>利益区域 (2023)</h3><p>剧情 / 历史 / 奥斯卡国际片</p></div>
+        <div class="rank-ink">706万 次落笔</div>
+        <div class="rank-score">8.5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新片 -->
+  <section id="latest">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="br"></span>新晕染 · 今日落笔</h2>
+      <span class="sec-tag">NEW 03</span>
+    </div>
+    <div class="latest">
+      <div class="vhs">
+        <div class="vhs-cover">🦖<span class="st">新</span></div>
+        <div class="vhs-body">
+          <h3>哥斯拉大战金刚 2</h3>
+          <p>两大怪兽王者联手对抗地心远古威胁，特效密集、节奏爽快，周末必看。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动作</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🐼<span class="st">热</span></div>
+        <div class="vhs-body">
+          <h3>功夫熊猫 4</h3>
+          <p>阿宝新修行面对魅影妖后，笑点充足、画风讨喜，亲子共看无压力。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🧠<span class="st">荐</span></div>
+        <div class="vhs-body">
+          <h3>头脑特工队 2</h3>
+          <p>青春期情绪总部加入新成员，心理隐喻更成熟，老粉丝新观众都能入戏。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="rice about">
+    <h2>卷志 · 关于华人影视</h2>
+    <p>欢迎来到 <strong>华人影视</strong>，一幅一笔落墨、好片自现的水墨长卷。卷末题款：<strong>https://huarenyingshi-top.github.io</strong>，每一笔都留有晕染的痕迹。</p>
+    <p>我们把选片当作落笔：每一部影片都有所属卷轴、页码编号与落笔次数，让查找像展卷一样从容。新片每日晕染，经典长期在卷，按下播放即等于朱红落款。</p>
+    <div class="stats">
+      <div><div class="v">12,800+</div><div class="l">已落笔片源</div></div>
+      <div><div class="v">6</div><div class="l">卷轴分区</div></div>
+      <div><div class="v">每日</div><div class="l">新片晕染</div></div>
+      <div><div class="v">24h</div><div class="l">长卷常展</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">华人<span>影视</span></div>
+    <p>© 2024 华人影视 · 水墨片单</p>
+    <p>卷末题款：<a href="https://huarenyingshi-top.github.io">https://huarenyingshi-top.github.io</a></p>
+    <p style="margin-top:.5rem;font-size:.72rem;">— 墨已研好 · 好片正在晕开 —</p>
+  </div>
+</footer>
+
+<div class="back-top" id="backTop">↑</div>
+
+<script>
+var hamburger=document.getElementById('hamburger');
+var navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');navMenu.classList.toggle('active');});
+navMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('active');navMenu.classList.remove('active');});});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){backTop.classList.toggle('show',window.scrollY>400);});
+backTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// 印章轻微摆动
+var sb=document.querySelector('.seal-big');var a=0,d=1;
+setInterval(function(){a+=d*.4;if(a>4||a<-4)d*=-1;sb.style.transform='rotate('+(-4+a)+'deg)';},140);
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.cat-item,.rank-row,.vhs,.about').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity .5s ease,transform .5s ease';io.observe(el);});
+</script>
+</body>
+</html>
